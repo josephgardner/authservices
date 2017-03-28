@@ -10,6 +10,25 @@ in code and in that case no web.config changes are needed. If an owin library
 is set up to use web.config (by passing `true` to the `KentorAuthServicesAuthenticationOptions` 
 constructor) the information here applies.
 
+- [Config Sections](#config-sections)
+- [Loading modules](#loading-modules)
+- [kentor.authServices Section](#kentorauthservices-section)
+    - [`<kentor.authServices>`](#kentorauthservices-element)
+    - [`<nameIdPolicy>`](#nameidpolicy-element)
+    - [`<requestedAuthnContext>`](#requestedauthncontext-element)
+    - [`<metadata>`](#metadata-element)
+    - [`<organization>`](#organization-element)
+    - [`<contactPerson>`](#contactperson-element)
+    - [`<requestedAttributes>`](#requestedattributes-element)
+    - [`<identityProviders>`](#identityproviders-element)
+    - [`<signingCertificate>`](#signingcertificate-element)
+    - [`<federations>`](#federations-element)
+    - [`<serviceCertificates>`](#servicecertificates-element)
+    - [`<compatibility>`](#compatibility-element)
+- [system.identityModel Section](#systemidentitymodel-section)
+    - [`<claimsAuthenticationManager>`](#claimsauthenticationmanager-element)
+- [system.IdentityModelServices Section](#systemidentitymodelservices-section)
+
 ## Config Sections
 Three new config sections are required. Add these under `configuration/configSections`:
 ```xml
@@ -88,14 +107,14 @@ read web.config, but can also be configured from code (see [Owin middleware](Owi
 Root element of the config section.
 
 ####  Attributes
-* [`returnUrl`](#returnUrl-attribute)
+* [`returnUrl`](#returnrl-attribute)
 * [`entityId`](#entityid-attribute)
 * [`discoveryServiceUrl`](#discoveryserviceurl-attribute)
 * [`modulePath`](#modulepath-attribute)
 * [`authenticateRequestSigningBehavior`](#authenticaterequestsigningbehavior-attribute)
 * [`validateCertificates`](#validatecertificates-attribute)
 * [`publicOrigin`](#publicorigin-attribute)
-* [`outboundSigningAlgorithm`](#signingalgorithm-attribute)
+* [`outboundSigningAlgorithm`](#outboundsigningalgorithm-attribute)
 * [`minIncomingSigningAlgorithm`](#minincomingsigningalgorithm-attribute)
 
 ####  Elements
@@ -767,7 +786,7 @@ Options are:
 | Encryption | Current | Encryption _unless Future key exists_ then not published | Yes |
 | Encryption | Future | Encryption | Yes |
 
-### `</compatibility>` Element
+### `<compatibility>` Element
 *Optional child element of the [`<kentor.authServices>`](#kentorauthservices-section) element.*
 
 Enables overrides of default behaviour to increase compatibility with identity
@@ -783,7 +802,7 @@ If an EntitiesDescriptor element is found when loading metadata for an
 IdentityProvider, automatically check inside it if there is a single
 EntityDescriptor and in that case use it.
 
-## `<system.identityModel>` Section
+## system.identityModel Section
 *Child element of `<configuration>` element.*
 
 There must be a [`<system.identityModel>`](http://msdn.microsoft.com/en-us/library/hh568638.aspx)
@@ -805,7 +824,7 @@ Specifies the type of a custom [`ClaimsAuthenticationManager`](ClaimsAuthenticat
 application. The default implementation just passes through the identity.
 
 
-### `<system.IdentityModelServices>` Section
+## system.IdentityModelServices Section
 *Child element of `<configuration>` element.*
 
 The [`<system.identityModel.services>`](http://msdn.microsoft.com/en-us/library/hh568674.aspx)
