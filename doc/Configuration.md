@@ -609,7 +609,7 @@ specified or from a certificate store if the other attributes are specified.
 If a `fileName` is specified that will take precedence and the other attributes
 will be ignored.
 
-###Attributes
+### Attributes
 * [`fileName`](#filename-attribute)
 * [`storeName`](#storename-attribute)
 * [`storeLocation`](#storelocation-attribute)
@@ -758,14 +758,14 @@ Options are:
  * PublishSigning
  * DoNotPublish
 
-Use | Status | Published in Metatadata | Used by AuthServices
------------- | ------------- | ------------- | ------------- | -------------
-Both | Current | Unspecified _unless Future key exists_, then Signing | Yes 
-Both | Future | Unspecified | For decryption only 
-Signing | Current | Signing | Yes 
-Signing | Future | Signing | No 
-Encryption | Current | Encryption _unless Future key exists_ then not published | Yes 
-Encryption | Future | Encryption | Yes 
+| Use | Status | Published in Metatadata | Used by AuthServices |
+| --- | --- | --- | --- |
+| Both | Current | Unspecified _unless Future key exists_, then Signing | Yes |
+| Both | Future | Unspecified | For decryption only |
+| Signing | Current | Signing | Yes |
+| Signing | Future | Signing | No |
+| Encryption | Current | Encryption _unless Future key exists_ then not published | Yes |
+| Encryption | Future | Encryption | Yes |
 
 ### `</compatibility>` Element
 *Optional child element of the [`<kentor.authServices>`](#kentorauthservices-section) element.*
@@ -783,7 +783,7 @@ If an EntitiesDescriptor element is found when loading metadata for an
 IdentityProvider, automatically check inside it if there is a single
 EntityDescriptor and in that case use it.
 
-##`<system.identityModel>` Section
+## `<system.identityModel>` Section
 *Child element of `<configuration>` element.*
 
 There must be a [`<system.identityModel>`](http://msdn.microsoft.com/en-us/library/hh568638.aspx)
