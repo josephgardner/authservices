@@ -518,7 +518,7 @@ A list of identity providers known to the service provider.
 *Child element of the [`<identityProviders`](#identityproviders-element) element.*
 
 #### Attributes
-* [`entityID`](#entityId-attribute-identityprovider)
+* [`entityID`](#entityid-attribute-identityprovider)
 * [`signOnUrl`](#signonurl-attribute)
 * [`logoutUrl`](#logouturl-attribute)
 * [`allowUnsolicitedAuthnResponse`](#allowunsolicitedauthnresponse-attribute)
@@ -526,8 +526,8 @@ A list of identity providers known to the service provider.
 * [`wantAuthnRequestsSigned`](#wantauthnrequestssigned-attribute)
 * [`loadMetadata`](#loadmetadata-attribute)
 * [`metadataLocation`](#metadataLocation-attribute-idp)
-* [`disableOutboundLogoutRequests`](disableOutboundLogoutRequests-attribute)
-* [`outboundSigningAlgorithm`](outboundSigningAlgorithm-attribute)
+* [`disableOutboundLogoutRequests`](#disableoutboundlogoutrequests-attribute)
+* [`outboundSigningAlgorithm`](#outboundsigningalgorithm-attribute)
 
 #### Elements
 * [`<signingCertificate>`](#signingcertificate-element)
