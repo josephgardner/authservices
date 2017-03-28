@@ -696,7 +696,7 @@ enumeration.
 Contains a list of federations that the service provider knows and trusts.
 
 #### Elements
-* [`<add>`](#add-federation-element).
+* [`<add>`](#add-federation-element)
 
 ### `<add>` Federation Element
 * Child element of the `<federations>`(#federations-element) element.*
@@ -735,7 +735,7 @@ key(s) will be used during decryption/signing.
 
 
 #### Elements
-* [`<add>`](#add-servicecertificate-element).
+* [`<add>`](#add-servicecertificate-element)
 
 Add a service certificate
 
