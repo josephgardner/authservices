@@ -107,7 +107,7 @@ read web.config, but can also be configured from code (see [Owin middleware](Owi
 Root element of the config section.
 
 ####  Attributes
-* [`returnUrl`](#returnrl-attribute)
+* [`returnUrl`](#returnurl-attribute)
 * [`entityId`](#entityid-attribute)
 * [`discoveryServiceUrl`](#discoveryserviceurl-attribute)
 * [`modulePath`](#modulepath-attribute)
