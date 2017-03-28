@@ -536,7 +536,7 @@ A list of identity providers known to the service provider.
 *Attribute of the [`<add>`](#add-identityprovider-element) element*
 
 The issuer name that the idp will be using when sending responses. When `<loadMetadata>`
-is enabled, the `entityId` is treated as a URL to for downloading the metadata.
+is enabled, the `entityId` is treated as a URL for downloading the metadata.
 
 #### `signOnUrl` Attribute
 *Optional attribute of the [`<add>`](#add-identityprovider-element) element*
